@@ -5,7 +5,7 @@
 			$input.addClass("clearable");
 			$input.wrap("<div class='input-control'></div>")
 			var $wrapper = $input.parent();
-			$wrapper.append("<a href='#' class='btn-clear hide'><i class='glyphicon glyphicon-remove' tabindex='-1'></i></a>");
+			$wrapper.append("<a href='#' class='btn-clear hide' tabindex='-1'><i class='glyphicon glyphicon-remove'></i></a>");
 			var $btn = $wrapper.find(".btn-clear");
 			// clear input when press x button
 			$wrapper.delegate(".btn-clear", "click", function(){
