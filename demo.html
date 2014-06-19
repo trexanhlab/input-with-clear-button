@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+	<title>inputx jQuery plug-in</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./src/inputx.css" rel="stylesheet">
+	<style>
+		body {
+			width:640px;
+			margin:50px auto;
+			padding:4px;
+		}
+	</style>
+</head>
+<body>
+	<h2>inputx - input with clear button</h2>
+	<input type="text" class="form-control" placeholder='data-x-btn="true"' data-x-btn="true">
+	<h2>inputx - input without clear button</h2>
+	<input type="text" class="form-control" placeholder='data-x-btn="false"' data-x-btn="false">
+	<h2>inputx - input without clear button</h2>
+	<input type="text" class="form-control" placeholder='no data-x-btn'>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="./src/inputx.js"></script>
+	<script>
+		$("input").inputx();
+	</script>
+</body>
+</html>
