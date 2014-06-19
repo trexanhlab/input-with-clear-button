@@ -2,6 +2,7 @@
 	$.fn.inputx = function() {
 		return this.filter("[data-x-btn='true']").each(function() {
 			var $input = $(this);
+			$input.addClass("clearable");
 			$input.wrap("<div class='input-control'></div>")
 			var $wrapper = $input.parent();
 			$wrapper.append("<a href='#' class='btn-clear hide'><i class='glyphicon glyphicon-remove' tabindex='-1'></i></a>");
@@ -23,18 +24,6 @@
 					$btn.removeClass("hide");
 				} else {
 					$btn.addClass("hide");
-				}
-			});
-			// hide x button on blur
-			$input.blur(function() {
-				if (!$btn.hasClass("hide")) {
-					$btn.addClass("hide");
-				}
-			});
-			// show x button on focus and input is not empty
-			$input.on("focus", function() {
-				if ($input.val()) {
-					$btn.removeClass("hide");
 				}
 			});
 		});
