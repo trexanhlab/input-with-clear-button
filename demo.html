@@ -3,12 +3,13 @@
 <html lang="en">
  <head>
     <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>inputx jQuery plug-in</title>
 	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="./src/inputx.css" rel="stylesheet">
+	<link href="./src/quick-clear.css" rel="stylesheet">
 	<style>
 		body {
-			width:640px;
+			width:450px;
 			margin:50px auto;
 			padding:4px;
 		}
@@ -18,17 +19,17 @@
 	<!-- preload -->
 	<i class="glyphicon glyphicon-remove" style="position:absolute;opacity:0;text-indent:-9999px;"></i>
 	<!-- end preload -->
-	<h2>inputx - input with clear button</h2>
 	<form action="" method="post">
-		<input type="text" class="form-control" placeholder='data-x-btn="true"' data-x-btn="true" name="a">
+		<h2>inputx - input with clear button</h2>
+		<input type="text" class="form-control" placeholder='data-clear-btn="true"' data-clear-btn="true" name="a">
 		<h2>inputx - input without clear button</h2>
-		<input type="text" class="form-control" placeholder='data-x-btn="false"' data-x-btn="false" name="b">
+		<input type="text" class="form-control" placeholder='data-clear-btn="false"' data-clear-btn="false" name="b">
 		<h2>inputx - input without clear button</h2>
-		<input type="text" class="form-control" placeholder='no data-x-btn' name="c">
+		<input type="text" class="form-control" placeholder='no data-clear-btn' name="c">
 		<br>
 		<p><button>Submit</button></p>
 	</form>
 	<script src="./jquery/jquery-1.11.1.min.js"></script>
-	<script src="./src/inputx.js"></script>
+	<script src="./src/quick-clear.js"></script>
 </body>
 </html>
