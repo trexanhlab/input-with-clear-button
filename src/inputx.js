@@ -3,7 +3,7 @@
 		return this.filter("[data-x-btn='true']").each(function() {
 			var $input = $(this);
 			$input.addClass("clearable");
-			$input.wrap("<div class='input-control'></div>")
+			$input.wrap("<div class='input-control'></div>");
 			var $wrapper = $input.parent();
 			$wrapper.append("<a href='#' class='btn-clear hide' tabindex='-1'><i class='glyphicon glyphicon-remove'></i></a>");
 			var $btn = $wrapper.find(".btn-clear");
@@ -16,16 +16,20 @@
 			$input.keyup(function(e) {
 				// clear input if escape key pressed
 				var code = e.charCode || e.keyCode;
-				if (code == 27) {
+				if (code === 27) {
 					$input.val('').focus();
 				}
-				// show clear button if input is not empty
-				if ($input.val()) {
-					$btn.removeClass("hide");
-				} else {
-					$btn.addClass("hide");
-				}
 			});
+			function toggleClear() {
+				setTimeout( function() {
+					if ($input.val()) {
+						$btn.removeClass("hide");
+					} else {
+						$btn.addClass("hide");
+					}
+				}, 0 );
+			}
+			$input.bind( "paste cut keyup input focus change blur", toggleClear );
 		});
 	};
 }( jQuery ));

@@ -15,14 +15,19 @@
 	</style>
 </head>
 <body>
-	<h2>inputx - input with clear button</h2>
-	<input type="text" class="form-control" placeholder='data-x-btn="true"' data-x-btn="true">
-	<h2>inputx - input without clear button</h2>
-	<input type="text" class="form-control" placeholder='data-x-btn="false"' data-x-btn="false">
-	<h2>inputx - input without clear button</h2>
 	<!-- preload -->
 	<i class="glyphicon glyphicon-remove" style="position:absolute;opacity:0;text-indent:-9999px;"></i>
-	<input type="text" class="form-control" placeholder='no data-x-btn'>
+	<!-- end preload -->
+	<h2>inputx - input with clear button</h2>
+	<form action="" method="post">
+		<input type="text" class="form-control" placeholder='data-x-btn="true"' data-x-btn="true" name="a">
+		<h2>inputx - input without clear button</h2>
+		<input type="text" class="form-control" placeholder='data-x-btn="false"' data-x-btn="false" name="b">
+		<h2>inputx - input without clear button</h2>
+		<input type="text" class="form-control" placeholder='no data-x-btn' name="c">
+		<br>
+		<p><button>Submit</button></p>
+	</form>
 	<script src="./jquery/jquery-1.11.1.min.js"></script>
 	<script src="./src/inputx.js"></script>
 </body>
